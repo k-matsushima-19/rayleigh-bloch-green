@@ -185,7 +185,7 @@ void example2(void){
 
                 }
 
-                std::ofstream ff(filename+"_"+std::to_string(ind)+"_farfield.dat");
+                std::ofstream ff("../output/"+filename+"_"+std::to_string(ind)+"_farfield.dat");
                 for(int m=-20; m<20; m++){
                     std::complex<double> Bp = Bps[m+20]/std::sqrt(scale) * std::exp(-ione*phase);
                     std::complex<double> Bm = Bms[m+20]/std::sqrt(scale) * std::exp(-ione*phase);
@@ -208,7 +208,7 @@ void example2(void){
                 Collocation c(&kernel, N);
 
                 // Top
-                std::ofstream ff(filename+"_"+std::to_string(ind)+"_eigenmode.dat");
+                std::ofstream ff("../output/"+filename+"_"+std::to_string(ind)+"_eigenmode.dat");
 
                 std::complex<double> scale = 1.0;
                 for(int iy=0;iy<NY;iy++){

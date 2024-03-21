@@ -10,7 +10,7 @@ LIB_PATHS =
 LIB_NAMES += pthread
 
 # C++
-CXX = g++-13
+CXX = g++
 CXXFLAGS += -std=c++17
 INCLUDES = ./include
 
